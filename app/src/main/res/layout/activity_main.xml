@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    tools:context="com.cs193a.kjlaw.hw2.MainActivity">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TO-DO LIST!"
+            android:textSize="32sp"
+            android:background="#575757"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:gravity="center_horizontal"
+            android:text="Click an item to remove it"
+            android:textSize="14sp"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/subtitle"
+            android:layout_above="@+id/addSection"
+            android:layout_height="0dp"
+            android:id="@android:id/list"
+            android:layout_weight="1"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/addSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Add item"
+            android:layout_weight="95"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="#DBDBDB"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="+"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
